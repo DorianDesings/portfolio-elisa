@@ -1,0 +1,47 @@
+@use '../mixins/pseudo.scss' as *;
+
+.article {
+  position: relative;
+  margin-left: 9.6vh;
+
+  &::after,
+  &::before {
+    @include pseudo(100vw, 1px);
+    top: 0;
+    left: -10vh;
+    background-color: var(--black-color);
+  }
+
+  &::before {
+    top: 100%;
+  }
+
+  &__content {
+    padding-left: 2rem;
+
+    &::after,
+    &::before {
+      @include pseudo(10.2vh, 100%);
+      top: 0;
+      left: -10vh;
+      background-color: var(--background-color);
+    }
+
+    &::after {
+      border-right: 1px solid var(--black-color);
+    }
+
+    &::before {
+      border-left: 1px solid var(--black-color);
+      left: 100%;
+      transform: translateX(-100%);
+    }
+  }
+}
+
+.skills {
+  padding-bottom: 5rem;
+  &__item {
+    margin-bottom: 1rem;
+  }
+}

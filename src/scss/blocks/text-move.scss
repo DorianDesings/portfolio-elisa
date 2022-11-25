@@ -1,0 +1,24 @@
+@use '../mixins/responsive.scss' as *;
+@use '../functions/text-shadow.scss' as *;
+
+.text-move {
+  padding-block: 0.5rem;
+  overflow: hidden;
+}
+
+.words {
+  $text-width: 110px;
+  display: inline-block;
+  white-space: nowrap;
+  /* El ancho del text debe ser igual que la distancia entre sombras */
+  width: $text-width;
+  animation: move-text 3s linear infinite;
+  /* Text shadow funciona igual que box-shadow, pero para texto   */
+  text-shadow: text-shadow($text-width, 10);
+}
+
+@keyframes move-text {
+  to {
+    transform: translateX(-100%);
+  }
+}

@@ -1,0 +1,67 @@
+@use '../mixins/responsive.scss' as *;
+
+.hamburger-icon-container {
+  position: absolute;
+  left: 30px;
+  top: 60px;
+  z-index: var(--z-index-modal);
+  width: 24px;
+  height: 50px;
+
+  @include responsive(tablet) {
+    padding-top: 170px;
+  }
+}
+
+.hamburger-icon {
+  position: absolute;
+  top: 50%;
+  width: 24px;
+  height: 4px;
+  background-color: var(--menu-icon-color);
+  transition-property: background-color;
+  transition-duration: 0.9s;
+
+  &--cross {
+    background-color: transparent;
+    transition-property: background-color;
+    transition-duration: 0.4s;
+  }
+
+  @include responsive(tablet) {
+    width: 35px;
+    height: 6px;
+  }
+
+  &::after,
+  &::before {
+    content: '';
+    width: 24px;
+    height: 4px;
+    background-color: var(--menu-icon-color);
+    position: absolute;
+    transform: translateY(-200%);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    @include responsive(tablet) {
+      width: 35px;
+      height: 6px;
+    }
+  }
+
+  &::before {
+    transform: translateY(200%);
+  }
+
+  /* ANIMACION ICONO HAMBURGUESA */
+
+  &--cross::after,
+  &--cross::before {
+    background-color: var(--primary-color);
+    transform: rotate(45deg);
+  }
+
+  &--cross::before {
+    transform: rotate(-45deg);
+  }
+}

@@ -1,0 +1,20 @@
+@use 'base/normalize.scss';
+@use 'base/initial-reset.scss';
+@use 'config/variables.scss';
+@use 'blocks/body.scss';
+@use 'blocks/titles.scss';
+@use 'blocks/texts.scss';
+@use 'blocks/buttons.scss';
+@use 'blocks/header.scss';
+@use 'blocks/hamburger-icon.scss';
+@use 'blocks/menu.scss';
+
+@use 'blocks/main.scss';
+@use 'blocks/articles.scss';
+@use 'blocks/footer.scss';
+@use 'blocks/social-media.scss';
+@use 'blocks/icons.scss';
+@use 'blocks/formulary.scss';
+@use 'blocks/text-move.scss';
+@use 'blocks/night-mode.scss';
+@use 'helpers/helpers.scss';

@@ -1,0 +1,9 @@
+@function text-shadow($text-width, $number-of-shadows) {
+  $val: '';
+
+  @for $i from 1 to $number-of-shadows {
+    $val: #{$val}, $text-width * $i 0;
+  }
+
+  @return $val;
+}

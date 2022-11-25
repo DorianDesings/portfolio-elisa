@@ -1,0 +1,14 @@
+@use '../mixins/responsive.scss' as *;
+
+.social-media {
+  &__item {
+    width: 3rem;
+  }
+
+  &__link {
+    display: block;
+    &:not(:last-of-type) {
+      margin-block: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.title {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+  margin-bottom: 0;
+
+  &--xs {
+    font-size: var(--title-xs);
+  }
+  &--s {
+    font-size: var(--title-s);
+  }
+  &--m {
+    font-size: var(--title-m);
+  }
+  &--l {
+    font-size: var(--title-l);
+  }
+  &--xl {
+    font-size: var(--title-xl);
+  }
+  &--xxl {
+    font-size: var(--title-xxl);
+  }
+}

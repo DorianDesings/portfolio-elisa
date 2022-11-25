@@ -1,0 +1,22 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/pseudo.scss' as *;
+.header {
+  position: relative;
+  background-image: var(--degradados-background);
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__content {
+    margin-left: 15vh;
+    margin-top: 25vh;
+  }
+
+  &::after {
+    @include pseudo(100px, 200px) {
+      bottom: 3rem;
+      left: 1rem;
+      background-image: url(../assets/images/scroll.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}

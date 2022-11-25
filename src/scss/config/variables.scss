@@ -1,0 +1,33 @@
+:root {
+  --x-cord: 0;
+  --y-cord: 0;
+  --cursor-color: #eae1f4;
+
+  --header-line-color: #000;
+
+  --menu-icon-color: #000;
+
+  --black-color: #000;
+  --white-color: #fff;
+  --background-color: #eae1f4;
+  --primary-color: #e8d3ff;
+
+  /* Font sizes */
+  --title-xs: 1.7rem;
+  --title-s: 1.9375rem;
+  --title-m: 2.875rem;
+  --title-l: 3.75rem;
+  --title-xl: 4.1rem;
+  --title-xxl: 6.25rem;
+
+  /* z-index */
+  --z-index-back: -1;
+  --z-index-base: 1;
+  --z-index-layout: 10;
+  --z-index-over-layout: 100;
+  --z-index-modal: 1000;
+
+  /* Degradados */
+  --degradados-background: url(../assets/images/degradados.svg);
+  --degradados-nav: url(../assets/images/nav-background.svg);
+}

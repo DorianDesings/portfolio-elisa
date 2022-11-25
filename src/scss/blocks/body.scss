@@ -1,0 +1,38 @@
+@use '../mixins/responsive.scss' as *;
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  background-color: var(--background-color);
+
+  @include responsive(laptop) {
+    cursor: none;
+  }
+
+  /* Líneas de la cabecera */
+
+  &::after,
+  &::before {
+    content: '';
+    position: fixed;
+    top: 112px;
+    z-index: var(--z-index-over-layout);
+    height: 1px;
+    width: 100%;
+    background-color: var(--header-line-color);
+    position: absolute;
+    @include responsive(tablet) {
+      top: 150px;
+    }
+  }
+
+  &::before {
+    top: 0;
+    height: 100vh;
+    width: 1px;
+    left: 64px;
+    @include responsive(tablet) {
+      left: 120px;
+    }
+  }
+}
